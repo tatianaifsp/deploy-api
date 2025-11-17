@@ -1,0 +1,15 @@
+{
+  "name": "api-swagger-auto-fixed",
+  "version": "1.0.0",
+  "description": "API com Swagger automático e sem banco de dados (corrigida)",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1"
+  }
+}
