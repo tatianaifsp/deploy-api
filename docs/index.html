@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Documentação da API</title>
+    <link rel="stylesheet" type="text/css" href="./swagger-ui.css" />
+</head>
+<body>
+    <div id="swagger-ui"></div>
+    
+    <script src="./swagger-ui-bundle.js"></script>
+    
+    <script src="./swagger-ui-standalone-preset.js"></script>
+    
+    <script>
+        // Função executada quando a página termina de carregar
+        window.onload = function() {
+            // Inicializa e configura o Swagger UI
+            SwaggerUIBundle({
+                // A chave! Especifica o caminho para o arquivo de ESPECIFICAÇÃO da API.
+                // Deve ser 'swagger.json' porque está na mesma pasta do 'index.html' no deploy.
+                url: "swagger.json", 
+                
+                // Liga a interface do Swagger UI ao elemento <div> com id="swagger-ui"
+                dom_id: '#swagger-ui',
+                
+                // Define quais módulos e funcionalidades do Swagger UI devem ser carregados
+                presets: [
+                    // Carrega a funcionalidade básica de APIs
+                    SwaggerUIBundle.presets.apis,
+                    // Carrega o preset para que o layout seja "standalone" (autônomo)
+                    SwaggerUIStandalonePreset
+                ],
+                
+                // Define o layout básico da interface (útil para customização)
+                layout: "BaseLayout",
+            });
+        };
+    </script>
+</body>
+</html>
